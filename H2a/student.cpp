@@ -1,13 +1,12 @@
 #include "Student.h"
-#include <string> // Käytetään std::stringiä nimen tallentamiseen, jos et käytä QStringiä
 
 // Alustaa opiskelijan tiedot
-Student::Student(const std::string& name, int studentNumber, double average)
+Student::Student(const string& name, int studentNumber, double average)
     : name(name), studentNumber(studentNumber), average(average) {}
 
 // Getterit
 // Hakee opiskelijan nimen
-std::string Student::getName() const {
+string Student::getName() const {
     return name;
 }
 // Hakee opiskelijan opiskelijanumeron
@@ -21,7 +20,7 @@ double Student::getAverage() const {
 
 // Setterit
 // Asettaa opiskelijan nimen
-void Student::setName(const std::string& name) {
+void Student::setName(const string& name) {
     this->name = name;
 }
 // Asettaa opiskelijan opiskelijanumeron

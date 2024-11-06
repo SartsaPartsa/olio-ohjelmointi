@@ -1,14 +1,14 @@
 #ifndef CAR_H
 #define CAR_H
-#include <string> // Käytetään std::stringiä nimen tallentamiseen, jos et käytä QStringiä
-
+#include <iostream>
+using namespace std;
 
 // Määritellään Car-luokka, joka kuvaa auton tietoja
 class Car {
 private:
      // Auton tiedot tallennetaan näihin muuttujiin
-    std::string brand;     // Auton merkki
-    std::string model;     // Auton malli
+    string brand;     // Auton merkki
+    string model;     // Auton malli
     int yearModel;         // Auton valmistusvuosi
 
 public:
@@ -18,8 +18,8 @@ public:
     void printData() const;
 
     // Määritetään auton tiedot
-    void setBrand(const std::string &newBrand); // Asettaa auton merkin
-    void setModel(const std::string &newModel); // Asettaa auton mallin
+    void setBrand(const string &newBrand); // Asettaa auton merkin
+    void setModel(const string &newModel); // Asettaa auton mallin
     void setYearModel(int newYearModel);        // Asettaa auton valmistusvuoden
 };
 

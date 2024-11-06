@@ -1,15 +1,16 @@
 #ifndef STUDENT_H
 #define STUDENT_H
-#include <string>  // Käytetään std::stringiä nimen tallentamiseen, jos et käytä QStringiä
+#include <iostream>
+using namespace std;
 
 class Student
 {
 public:
     // Alustaa opiskelijan tiedot
-    Student(const std::string& name, int studentNumber, double average);
+    Student(const string& name, int studentNumber, double average);
 
     // Palauttaa opiskelijan nimen
-    std::string getName() const;
+    string getName() const;
 
     // Palauttaa opiskelijanumeron
     int getStudentNumber() const;
@@ -18,7 +19,7 @@ public:
     double getAverage() const;
 
     // Asettaa opiskelijan nimen
-    void setName(const std::string& name);
+    void setName(const string& name);
 
     // Asettaa opiskelijanumeron
     void setStudentNumber(int studentNumber);
@@ -27,7 +28,7 @@ public:
     void setAverage(double average);
 
 private:
-    std::string name;      // Opiskelijan nimi
+    string name;      // Opiskelijan nimi
     int studentNumber;     // Opiskelijanumero
     double average;        // Opiskelijan keskiarvo
 };
