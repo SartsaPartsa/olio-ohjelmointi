@@ -1,8 +1,8 @@
 #include "Car.h"
 #include "Rectangle.h"
+#include "Student.h"
 #include <iostream>
 #include <memory> // Käytetään smart pointeria
-#include "Student.h"
 
 
 int main() {
