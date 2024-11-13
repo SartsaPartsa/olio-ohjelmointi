@@ -6,16 +6,16 @@
 
 using namespace std;
 
-// Määrittellään, mitä kokki voi tehdä
+// Määritellään, mitä kokki voi tehdä
 class Chef {
 public:
     // Luodaan (konstruktio) uusi kokki ja annetaan nimi
     Chef(const string &name);
 
-    // Poistetaan kokki ja vapautetaan muistia
+    // Poistetaan (destruktori) kokki ja vapautetaan muistia
     virtual ~Chef();
 
-     // Nämä ovat kokin tekemät toiminnot
+     // Kerrotaan mitä kokki voi tehdä
     void makeSalad(); // Kokki voi tehdä salaatin
     void makeSoup(); // Kokki voi tehdä keiton
 
