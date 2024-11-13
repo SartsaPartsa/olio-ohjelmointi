@@ -1,23 +1,24 @@
 #include "Chef.h"
 using namespace std;
 
-// Luodaan kokille nimi ja tallentaa sen muistiin
+// Luodaan (konstruktio) kokin nimi ja tallennetaan se muistiin
+// Tulostetaan viesti, joka ilmoittaa, että kokki on luotu
 Chef::Chef(const string &name) : name(name) {
-    cout << "Chef " << name << " konstruktori" << endl; // Tulostetaan tieto että kokki on luotu
+    cout << "Chef " << name << " konstruktori" << endl; // Tulostaa tiedon kokin luomisesta
 }
-// Poistaa kokin käytöstä ja muistista
+// Poistaa (estruktori) kokin käytöstä ja muistista
 Chef::~Chef() {
-    cout << "Chef " << name << " destruktori" << endl;  // Tulostetaan tieto, kun kokki poistetaan muistista
+    cout << "Chef " << name << " destruktori" << endl;  // Tulostaa tiedon kokin poistamisesta
 }
-// Kertoo, että Chef-kokki tekee salaatin
+// Metodi, joka kertoo, että kokki valmistaa salaatin
 void Chef::makeSalad() {
     cout << "Chef " << name << " makes salad" << endl; // Tulostetaan tieto salaatin valmistuksesta
 }
-// Kertoo, että Chef-kokki tekee keiton
+// MEtodi, joka kertoo, että kokki valmistaa keiton
 void Chef::makeSoup() {
     cout << "Chef " << name << " makes soup" << endl; // Tulostetaan tieto keiton valmistuksesta
 }
-// Palautetaan Chef-kokin nimen
+// Palauttaa kokin nimen
 string Chef::getName() const {
     return name;
 }

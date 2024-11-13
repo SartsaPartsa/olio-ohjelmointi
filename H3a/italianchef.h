@@ -3,23 +3,22 @@
 
 #include "Chef.h"
 
-// ItalianChef perii Chef-luokan taidot
+// ItalianChef-luokka perii Chef-luokan toiminnot
 class ItalianChef : public Chef {
 public:
-    // Luodaan uusi ItalianChef-kokki ja annetaan sille nimi
-    // Luontivaiheessa kutsutaan myös alkuperäisen Chef-kokin luontia
+    // Konstruktorissa asetetaan ItalianChef-olion nimi ja kutsutaan Chef-luokan konstruktoria
+    // Tämä luo ItalianChef-olion, joka perii Chef-luokan ominaisuudet
     ItalianChef(const string& name);
 
-    // Kertoo mitä ItalianChef voi tehdä
-    // Tämä toiminto tulostaa, että ItalianChef valmistaa pastaa
+    // Kertoo, että ItalianChef valmistaa pastaa
     void makePasta();
 
-    // Poistetaan ItalianChef-kokki muistista
-    // Tämä tapahtuu automaattisesti, kun ItalianChef-olio ei ole enää käytössä
-    ~ItalianChef(); // Tulostaa tiedon ettäItalianChef on poistettu muistista
+    // Destruktori, joka tuhoaa ItalianChef-olion ja vapauttaa sen käyttämän muistin
+    // Tulostaa viestin, että ItalianChef on poistettu muistista
+    ~ItalianChef();
 
-    // Funktio kokin nimen saamiseksi
-    // Paluttaa ItalianChef-kokin nimen, joka periytyy Chef-luokasta
+    // Tämä funktio palauttaa ItalianChef-olion nimen
+    // Nimi periytyy Chef-luokasta
     string getName() const;
 };
 

@@ -6,24 +6,25 @@
 
 using namespace std;
 
-// Määritellään, mitä kokki voi tehdä
+// Chef-luokka määrittelee kokin perustoiminnot
 class Chef {
 public:
-    // Luodaan (konstruktio) uusi kokki ja annetaan nimi
+    // Konstruktorissa asetetaan kokin nimi ja tallennetaan se olioon
     Chef(const string &name);
 
-    // Poistetaan (destruktori) kokki ja vapautetaan muistia
+     // Destruktori, joka vapauttaa mahdolliset resurssit ja huolehtii olion poistamisesta
     virtual ~Chef();
 
-     // Kerrotaan mitä kokki voi tehdä
-    void makeSalad(); // Kokki voi tehdä salaatin
-    void makeSoup(); // Kokki voi tehdä keiton
+     // Metodi, jonka avulla kokki voi valmistaa salaatin
+    void makeSalad();
+    // Metodi, jonka avulla kokki voi valmistaa salaatin
+    void makeSoup();
 
-     // Funktio palauttaa kokin nimen
+     // Palauttaa kokin nimen
     string getName() const;
 
 protected:
-    string name; // Tallennetaan kokin nimi (suojattu, kokki ja sen alaluokat voi käyttää sitä)
+    string name; // Kokin nimi tallennetaan tähän (tämä on suojattu alaluokkia varten)
 
 };
 
