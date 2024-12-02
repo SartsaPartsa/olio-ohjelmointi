@@ -6,20 +6,22 @@
 #include <QCoreApplication>
 #include <QDebug>
 
+// Määritellään ExampleClass, joka perii QObjectin
 class ExampleClass : public QObject
 {
-    Q_OBJECT
+    Q_OBJECT // Qt:n signaali-slot-järjestelmän vaatima makro
 
 public:
-    explicit ExampleClass(QObject* parent = nullptr);
+    explicit ExampleClass(QObject* parent = nullptr); // Konstruktorin määrittely, parentilla oletusarvo nullptr
 
-    void startToWait();
+    void startToWait(); // Julkinen metodi, joka käynnistää jonkin toiminnon (toiminto ei näy tässä koodissa)
+
 
 signals:
-    void readyToSay();
+    void readyToSay(); // Signaali, joka voidaan lähettää, kun toiminto on valmis
 
 public slots:
-    void sayHelloSlot();
+    void sayHelloSlot(); // Slot-metodi, joka suoritetaan, kun siihen yhdistetty signaali vastaanotetaan
 };
 
 #endif // EXAMPLECLASS_H

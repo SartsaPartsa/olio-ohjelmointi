@@ -8,5 +8,5 @@ int main(int argc, char *argv[])
     ExampleClass example;
     example.startToWait();  // Kutsutaan metodia, joka emitoi signaalin
 
-    return a.exec();  // Suoritetaan Qt:n tapahtumasilmukka (ei tarpeen tässä yksinkertaisessa esimerkissä)
+    return a.exec();  // Palautetaan sovelluksen suoritus Qt-tapahtumasilmukkaan (tässä se ei ole tarpeen, mutta yleensä käytetään)
 }
