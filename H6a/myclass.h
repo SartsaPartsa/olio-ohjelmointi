@@ -6,19 +6,19 @@
 #include <QDebug>
 using namespace  std;
 
-class MyClass : public QObject {
-    Q_OBJECT
+class MyClass : public QObject { // Luokka perii QObjectin, jotta se voi käyttää Qt:n ominaisuuksia
+    Q_OBJECT // Makro, joka tarvitaan Qt:n signaali-slot-järjestelmälle
 
 public:
-    MyClass(QObject* parent = nullptr);
+    MyClass(QObject* parent = nullptr); // Konstruktorin määrittely, parentilla oletusarvo nullptr
 
-    void raiseMySignal();
+    void raiseMySignal(); // Metodi, joka lähettää signaalin
 
 signals:
-    void mySignal();
+    void mySignal(); // Signaali, joka voidaan lähettää
 
 public slots:
-    void mySlot();
+    void mySlot(); // Slot-metodi, joka voi vastaanottaa signaaleja
 };
 
 #endif // MYCLASS_H

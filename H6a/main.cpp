@@ -3,11 +3,11 @@
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+    QCoreApplication a(argc, argv); // Luo Qt-sovelluksen
 
     MyClass myObject;
     myObject.raiseMySignal();  // Kutsutaan metodin raiseMySignal
 
-    return a.exec();  // Suoritetaan Qt-tapahtumasilmukka (ei tarpeen tässä yksinkertaisessa esimerkissä)
+    return a.exec();  // Palautetaan sovelluksen suoritus Qt-tapahtumasilmukkaan (tässä se ei ole tarpeen, mutta yleensä käytetään)
 }
 
