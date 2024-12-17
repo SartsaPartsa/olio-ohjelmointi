@@ -4,27 +4,29 @@
 #include <QMainWindow>
 
 namespace Ui {
-class MainWindow;
+class MainWindow;  // Käyttöliittymän luokka
 }
 
+// MainWindow-luokka perii QMainWindow-luokan toiminnot
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+    Q_OBJECT  // Qt:n signaalit ja slotit
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    explicit MainWindow(QWidget *parent = nullptr);  // Konstruktori
+    ~MainWindow();  // Destruktori
 
 private slots:
-    void countButtonClicked();
-    void resetButtonClicked();
+    void countButtonClicked();  // Laskupainikkeen toiminto
+    void resetButtonClicked();  // Nollauspainikkeen toiminto
 
 private:
-    Ui::MainWindow *ui;
-    int counter = 0;
+    Ui::MainWindow *ui;  // Käyttöliittymän elementit
+    int counter = 0;  // Laskuri
 };
 
 #endif // MAINWINDOW_H
+
 
 
 

@@ -1,37 +1,42 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+// MainWindow-luokan konstruktori
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    QMainWindow(parent),  // Kutsutaan QMainWindow:n konstruktoria
+    ui(new Ui::MainWindow)  // Luodaan ui-olio (käyttöliittymä)
 {
-    ui->setupUi(this);
+    ui->setupUi(this);  // Asetetaan käyttöliittymä (luodaan elementit)
 
-    // Kytke painikkeet slotteihin
+    // Kytketään painikkeet slotteihin (toimintoihin)
     connect(ui->btnCount, &QPushButton::clicked, this, &MainWindow::countButtonClicked);
     connect(ui->btnReset, &QPushButton::clicked, this, &MainWindow::resetButtonClicked);
 }
 
+// MainWindow-luokan destruktori
 MainWindow::~MainWindow()
 {
-    delete ui;
+    delete ui;  // Vapautetaan käyttöliittymämuisti
 }
 
+// countButtonClicked()-funktio (laskupainikkeen toiminto)
 void MainWindow::countButtonClicked()
 {
-    counter++;
-    QString s = QString::number(counter);
-    ui->txtResult->setText(s);
-    ui->labelInfo->setText("Painiketta painettu " + s + " kertaa");
+    counter++;  // Lisätään laskuria
+    QString s = QString::number(counter);  // Muutetaan laskuri merkkijonoksi
+    ui->txtResult->setText(s);  // Päivitetään tuloskenttä
+    ui->labelInfo->setText("Painiketta painettu " + s + " kertaa");  // Päivitetään tiedon etiketti
 }
 
+// resetButtonClicked()-funktio (nollauspainikkeen toiminto)
 void MainWindow::resetButtonClicked()
 {
-    counter = 0;
-    QString s = QString::number(counter);
-    ui->txtResult->setText(s);
-    ui->labelInfo->setText("Painiketta painettu 0 kertaa");
+    counter = 0;  // Nollataan laskuri
+    QString s = QString::number(counter);  // Muutetaan laskuri merkkijonoksi
+    ui->txtResult->setText(s);  // Päivitetään tuloskenttä
+    ui->labelInfo->setText("Painiketta painettu 0 kertaa");  // Päivitetään tiedon etiketti
 }
+
 
 
 
